@@ -28,12 +28,6 @@ class UserRegisterView(CreateView):
 class UserLoginView(LoginView):
     template_name = 'accounts/login.html'
 
-    def get_success_url(self):
-        next = self.request.GET.get('next', None)
-        if next:
-            return next
-        return reverse_lazy('index')
-
 
 class UserLogoutView(LogoutView):
     pass

@@ -8,6 +8,7 @@
     <form action="{% url 'register' %}" method="post">
         {% csrf_token %}
         {{ form }}
+        {{ profile_form }}
         <button>Register</button>
     </form>
 </body>
